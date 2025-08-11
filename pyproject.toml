@@ -1,0 +1,27 @@
+[project]
+authors = [{name = "Andreas Copan", email = "avcopan@gmail.com"}]
+dependencies = []
+name = "expression_lib"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+rust = ">=1.89.0,<1.90"
+rust-src = ">=1.89.0,<2"
+compilers = ">=1.11.0,<2"
+clang = ">=20.1.8,<21"
+polars = ">=1.32.0,<2"
+ipykernel = ">=6.30.1,<7"
+ruff = ">=0.12.8,<0.13"
+maturin = ">=1.9.3,<2"
+pip = ">=25.2,<26"
